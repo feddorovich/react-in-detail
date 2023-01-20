@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import {Rating} from "./components/Rating/Rating";
 
 function App() {
     console.log("App rendering")
@@ -20,28 +20,6 @@ function AppTitle() {
     return (
         <div>
             This is APP component
-        </div>
-    )
-}
-
-function Rating() {
-    console.log("Rating rendering")
-    return (
-        <div>
-            <div><Star/></div>
-            <div><Star/></div>
-            <div><Star/></div>
-            <div><Star/></div>
-            <div><Star/></div>
-        </div>
-    );
-}
-
-function Star() {
-    console.log("Star rendering")
-    return (
-        <div>
-            Star
         </div>
     )
 }
