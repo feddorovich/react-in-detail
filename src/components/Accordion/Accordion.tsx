@@ -3,7 +3,6 @@ import React from "react";
 type AccordionPropstype = {
     titleValue: string
     collapsed: boolean
-    123
 }
 
 function Accordion(props: AccordionPropstype) {
