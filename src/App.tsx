@@ -3,16 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    console.log("App rendering")
     return (
         <div>
-            <div>Hello World</div>
+            <div><AppTitle /></div>
             <div><Rating /></div>
             <div><Accordion /></div>
+            <div><Rating /></div>
         </div>
     );
 }
 
+function AppTitle() {
+    return (
+        <div>
+            This is APP component
+        </div>
+    )
+}
+
 function Rating() {
+    console.log("Rating rendering")
     return (
         <div>
             <div><Star /></div>
@@ -25,14 +36,16 @@ function Rating() {
 }
 
 function Star() {
+    console.log("Star rendering")
     return (
         <div>
-            <div>Star</div>
+            Star
         </div>
     )
 }
 
 function Accordion() {
+    console.log("Accordion rendering")
     return (
         <div>
             <h3>Меню</h3>
