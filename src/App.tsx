@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
     console.log("App rendering")
@@ -15,6 +16,7 @@ function App() {
 }
 
 function AppTitle() {
+    console.log("AppTitle rendering")
     return (
         <div>
             This is APP component
@@ -40,36 +42,6 @@ function Star() {
     return (
         <div>
             Star
-        </div>
-    )
-}
-
-function Accordion() {
-    console.log("Accordion rendering")
-    return (
-        <div>
-            <AccordionTitle />
-            <AccordionBody />
-        </div>
-    )
-}
-
-function AccordionTitle() {
-    return (
-        <div>
-            <h3>Меню</h3>
-        </div>
-    )
-}
-
-function AccordionBody() {
-    return (
-        <div>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
         </div>
     )
 }
