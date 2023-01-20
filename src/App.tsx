@@ -6,10 +6,10 @@ function App() {
     console.log("App rendering")
     return (
         <div>
-            <div><AppTitle /></div>
-            <div><Rating /></div>
-            <div><Accordion /></div>
-            <div><Rating /></div>
+            <div><AppTitle/></div>
+            <div><Rating/></div>
+            <div><Accordion/></div>
+            <div><Rating/></div>
         </div>
     );
 }
@@ -26,11 +26,11 @@ function Rating() {
     console.log("Rating rendering")
     return (
         <div>
-            <div><Star /></div>
-            <div><Star /></div>
-            <div><Star /></div>
-            <div><Star /></div>
-            <div><Star /></div>
+            <div><Star/></div>
+            <div><Star/></div>
+            <div><Star/></div>
+            <div><Star/></div>
+            <div><Star/></div>
         </div>
     );
 }
@@ -48,7 +48,23 @@ function Accordion() {
     console.log("Accordion rendering")
     return (
         <div>
+            <AccordionTitle />
+            <AccordionBody />
+        </div>
+    )
+}
+
+function AccordionTitle() {
+    return (
+        <div>
             <h3>Меню</h3>
+        </div>
+    )
+}
+
+function AccordionBody() {
+    return (
+        <div>
             <ul>
                 <li>1</li>
                 <li>2</li>
