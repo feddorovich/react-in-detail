@@ -1,0 +1,13 @@
+.on {
+    background: green;
+    width: 30px;
+    height: 25px;
+    color: white;
+}
+
+.off {
+    background: red;
+    width: 30px;
+    height: 25px;
+    color: white;
+}
