@@ -6,71 +6,16 @@ type RatingPropsType = {
 
 export function Rating(propps: RatingPropsType) {
     console.log("Rating rendering")
-    if (propps.value === 1) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        );
-    }
-    if (propps.value === 2) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        );
-    }
-    if (propps.value === 3) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-                <Star selected={false}/>
-            </div>
-        );
-    }
-    if (propps.value === 4) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={false}/>
-            </div>
-        );
-    }
-    if (propps.value === 5) {
-        return (
-            <div>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-                <Star selected={true}/>
-            </div>
-        );
-    }
 
     return (
         <div>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
-            <Star selected={false}/>
+            <Star selected={propps.value > 0}/>
+            <Star selected={propps.value > 1}/>
+            <Star selected={propps.value > 2}/>
+            <Star selected={propps.value > 3}/>
+            <Star selected={propps.value > 4}/>
         </div>
-    );
+    )
 }
 
 type StarPropsType = {
