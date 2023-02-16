@@ -1,17 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 
 type AccordionPropstype = {
     titleValue: string
 }
 
 function Accordion(props: AccordionPropstype) {
-    console.log("Accordion rendering")
 
-    const collapsed = true;
+    let [collapsed, setСollapsed] = useState(false);
+
+    const funCollapsed = () => {
+        if (collapsed === false) {
+            setСollapsed(true)
+        } else {
+            setСollapsed(false)
+        }
+    }
 
     return (
         <div>
             <AccordionTitle title={props.titleValue}/>
+            <button onClick={funCollapsed}>TOGGLE</button>
             { !collapsed && <AccordionBody/> }
         </div>
     )
@@ -23,12 +31,10 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    console.log("AccordionTitle rendering")
     return <h3>-- {props.title} --</h3>
 }
 
 function AccordionBody() {
-    console.log("AccordionBody rendering")
     return (
         <div>
             <ul>
