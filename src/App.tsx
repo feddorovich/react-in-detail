@@ -9,12 +9,11 @@ import {UncontroledRaring} from "./components/Rating/UncontrolledRating";
 function App() {
     console.log("App rendering")
     return (
-        <div>
-            <UncontrolledAccordion titleValue={'Menu1'} />
-            <UncontrolledAccordion titleValue={'Menu2'} />
+        <div className={'App'}>
+            <UncontrolledAccordion titleValue={'Menu'} />
             <br/>
             <UncontroledRaring />
-
+            <br/>
             <OnOff/>
             <OnOff/>
         </div>

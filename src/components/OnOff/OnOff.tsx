@@ -32,7 +32,7 @@ const OnOff = () => {
     };
 
     return (
-        <div style={{margin: '20px'}}>
+        <div style={{marginTop: '20px'}}>
             <div style={onStyle} onClick={ ()=>{ setOn(true) } }>On</div>
             <div style={offStyle} onClick={ ()=>{ setOn(false) } }>Off</div>
             <div style={indicatorStyle}></div>
