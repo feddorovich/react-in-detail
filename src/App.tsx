@@ -17,7 +17,7 @@ function App() {
             <br/> <br/> <br/>
             <UncontroledRaring/>
             <br/> <br/> <br/>
-            <Accordion titleValue={'Control Menu'} collapsed={accordionCollapsed}/>
+            <Accordion titleValue={'Control Menu'} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
             <br/> <br/> <br/>
             <UncontrolledAccordion titleValue={'UnControl Menu'}/>
             <br/> <br/> <br/>
