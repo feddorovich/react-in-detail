@@ -1,6 +1,10 @@
 import React from "react";
 
 type AccordionPropstype = {
+    /**
+     * Сюда можно записать значение, которое будет прочитано документацией <br>
+     * Ctrl+Q или при наведении
+     */
     titleValue: string
     collapsed: boolean
     onChange: () => void
