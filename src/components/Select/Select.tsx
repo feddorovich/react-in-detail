@@ -11,13 +11,11 @@ type SelectPropsType = {
     items: ItemType[]
 }
 
-function Select(props: SelectPropsType) {
+export function Select(props: SelectPropsType) {
     return (
         <div>
             <div>{}</div>
             {props.items.map(i => <div>{i.title}</div>)}
         </div>
     );
-};
-
-export default Select;
+}
