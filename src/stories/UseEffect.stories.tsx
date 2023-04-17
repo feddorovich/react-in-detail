@@ -42,7 +42,7 @@ export const SetIntervalExample = () => {
     console.log('SetTimeoutExample')
 
     useEffect(() => {
-       const intervalId = setInterval(() => {
+        const intervalId = setInterval(() => {
             setCounter(state => state + 1)
         }, 1000)
 
@@ -92,6 +92,8 @@ export const KeysTrackerExample = () => {
         const handler = (e: KeyboardEvent) => {
             console.log(e.key)
             setText(text + e.key)
+            // or setText((state) => state + e.key)
+            // тогда не нужно писать в зависимости useEffect text
         }
 
         window.document.addEventListener('keypress', handler)
