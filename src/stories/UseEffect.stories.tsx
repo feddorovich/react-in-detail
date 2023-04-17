@@ -91,9 +91,10 @@ export const KeysTrackerExample = () => {
     useEffect(() => {
         const handler = (e: KeyboardEvent) => {
             console.log(e.key)
-            setText(text + e.key)
-            // or setText((state) => state + e.key)
-            // тогда не нужно писать в зависимости useEffect text
+            // setText(text + e.key) - в этом случае нужно писать в зависимость [text]
+            setText((state) => state + e.key)
+            // в этом значение count мы получаем при помощи callback функции
+            // поэтому зависимость прописывать не нужно
         }
 
         window.document.addEventListener('keypress', handler)
@@ -101,7 +102,7 @@ export const KeysTrackerExample = () => {
         return () => {
             window.document.removeEventListener('keypress', (handler))
         }
-    }, [text])
+    }, [])
 
     return (
         <>
