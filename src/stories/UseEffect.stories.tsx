@@ -27,7 +27,10 @@ export const SimpleExample = () => {
     return (
         <>
             Hello, {counter}
-            <button onClick={()=>{setCounter(state => state + 1)}}>+</button>
+            <button onClick={() => {
+                setCounter(state => state + 1)
+            }}>+
+            </button>
         </>
     );
 };
@@ -46,7 +49,28 @@ export const SetTimeoutExample = () => {
 
     return (
         <>
-             Hello, counter: {counter} - fake: {fake}
+            Hello, counter: {counter} - fake: {fake}
+        </>
+    );
+};
+
+export const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1)
+
+    console.log('ResetEffectExample')
+
+    useEffect(() => {
+        console.log('Effect occurred')
+    }, [])
+
+    const increase = () => {
+        setCounter(counter + 1)
+    }
+
+    return (
+        <>
+            Hello, counter: {counter}
+            <button onClick={increase}>+</button>
         </>
     );
 };
